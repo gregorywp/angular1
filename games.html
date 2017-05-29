@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="gamesModule">
+	<head>
+		<link rel='stylesheet' id='padhang-fonts-css'  href='//fonts.googleapis.com/css?family=Roboto%3A400%2C400italic%2C700%2C700italic%7CRoboto+Slab%3A300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=4.0' type='text/css' media='all' />
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="games.css">
+		<script src="gamesController.js"></script>
+	</head>
+	<body ng-controller="gamesController" ng-class="{green: selectedIndex==1,purple: selectedIndex==2}">
+		<header>
+			Gregory Prill AngularJS Demo
+			<div class="buttons">
+				<div class="button" ng-class="{selected: $index==selectedIndex}" ng-repeat="x in games" ng-click="changeGame($index)">
+						{{ x.name }}
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+		<div class="content">
+			<div class="game">
+				<wordfind ng-show="selectedIndex==0"></wordfind>
+				<picturematch ng-show="selectedIndex==1"></picturematch>
+				<questions ng-show="selectedIndex==2"></questions>
+			</div>
+		</div>
+	</body>
+</html>

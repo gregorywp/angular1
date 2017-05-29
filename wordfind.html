@@ -1,0 +1,27 @@
+<div class = "instructions">
+	Find all the words in the word list inside the jumble!
+</div>
+<div class="wordlist">
+	<div class="label">
+		Word List
+	</div>
+	<div class="word" ng-repeat="word in words">
+		{{word.value}} <img ng-show="word.found==1" src="checkmark.png"/>
+	</div>
+</div>
+<div class="wordbox">
+	rlqfobfkaxgvlpoxhnnv<br/>
+	cizwj<span ng-class="{found: words[2].found==1}" ng-click="wordFound(2)">awesome</span>ixfhegyg<br/>
+	krdajcpddqvagobrfqjy<br/>
+	vhepqfefweunf<span ng-class="{found: words[1].found==1}" ng-click="wordFound(1)">p</span>ghzgvl<br/>
+	q<span ng-class="{found: words[3].found==1}" ng-click="wordFound(3)">angularjs</span>ixxy<span ng-class="{found: words[1].found==1}" ng-click="wordFound(1)">r</span>jegru<br/>
+	kvhmniboslvzeyt<span ng-class="{found: words[1].found==1}" ng-click="wordFound(1)">i</span>ngwx<br/>
+	bznndjrmdyehvfku<span ng-class="{found: words[1].found==1}" ng-click="wordFound(1)">l</span>wow<br/>
+	mhroycwbfqulmbesx<span ng-class="{found: words[1].found==1}" ng-click="wordFound(1)">l</span>xd<br/>
+	bzh<span ng-class="{found: words[0].found==1}" ng-click="wordFound(0)">gregory</span>nhcslzzefv<br/>
+	ikncntrxeezsuglxqrqx 
+</div>
+<div class="clear"></div>
+<div class="wordreset" ng-click="wordReset()">
+	Reset
+</div>

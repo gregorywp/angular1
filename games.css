@@ -1,0 +1,215 @@
+body,html {
+    font-family: roboto;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+	background-color: #217FBC;
+	transition: background-color 0.5s ease;
+}
+
+body.green {
+	background-color: #1AAF5D;
+}
+
+body.purple {
+	background-color: #8F3FAE;
+}
+
+header {
+    color: #ffffff;
+    font-size: 32px;
+    padding: 20px;
+    text-align: center;
+}
+
+.clear {
+	clear: both;
+}
+
+.buttons {
+    font-size: 20px;
+    margin: 20px 0 0;
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.button.selected {
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #000000;
+    padding: 5px;
+}
+
+.content {
+    background-color: #ffffff;
+    height: 400px;
+    padding: 20px 0;
+}
+
+.game {
+    margin: 0 auto;
+    width: 650px;
+}
+
+.instructions {
+    font-size: 20px;
+    margin: 0 0 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.label {
+	font-weight: bold;
+}
+
+.word img {
+	width: 16px;
+}
+
+.wordlist {
+	float: left;
+}
+
+.wordbox {
+    border: 1px solid #000;
+    color: #666666;
+    cursor: pointer;
+    float: right;
+    font-family: courier;
+    letter-spacing: 10px;
+    padding: 10px;
+}
+
+.wordbox .found {
+    color: #00df23;
+    font-weight: bold;
+}
+
+.wordreset {
+    background-color: #217FBC;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+.picturelist {
+	float: left;
+}
+
+.pictureoption {
+	cursor: pointer;
+}
+
+.pictureoption img {
+	width: 16px;
+}
+
+.pictureright {
+	float: right;
+}
+
+.pictureright .score {
+	font-weight: bold;
+	text-align: right;
+}
+
+.pictureright .scoredots {
+	float: right;
+}
+
+.pictureright .dot {
+    border: 5px solid #9A0303;
+    border-radius: 5px;
+    float: left;
+    height: 0;
+    margin: 0 0 0 10px;
+    width: 0;
+}
+
+.pictureright .dot.green {
+	border: 5px solid #00df23;
+}
+
+.pictureright img {
+	border-radius: 5px;
+    margin: 0 250px 0 0;
+    width: 150px;
+}
+
+.picturecontrols {
+	padding: 20px;
+}
+
+.picturecontrols .prev,
+.picturecontrols .next {
+    background-color: #1AAF5D;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+	float: left;
+}
+
+.picturecontrols .next {
+	float: right;
+}
+
+.picturereset {
+    background-color: #1aaf5d;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+}
+
+.questionsscore {
+	text-align: center;
+}
+
+.questions {
+	margin: 15px 0 0;
+}
+
+.questions .question {
+	margin: 0 0 5px;
+}
+
+.question input {
+	margin: 0 0 0 15px;
+}
+
+.question img {
+	width: 16px;
+}
+
+.questionsreset {
+    background-color: #8F3FAE;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto 0;
+    padding: 5px;
+    text-align: center;
+    width: 100px;
+}

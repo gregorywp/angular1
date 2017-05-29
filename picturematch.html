@@ -1,0 +1,36 @@
+<div class = "instructions">
+	Click the correct name for each picture. See if you can get up to 5 out of 5 correct!
+</div>
+<div class="picturelist">
+	<div class="label">
+		Options
+	</div>
+	<div class="pictureoption" ng-repeat="option in picturematch.options" ng-click="pictureGuess(picturematch.currentPicture,$index)">
+		{{option.name}}
+		<img ng-show="$index==picturematch.guesses[picturematch.currentPicture].currentGuess && picturematch.guesses[picturematch.currentPicture].currentGuess == picturematch.guesses[picturematch.currentPicture].correctGuess" src="checkmark.png"/>
+		<img ng-show="$index==picturematch.guesses[picturematch.currentPicture].currentGuess && picturematch.guesses[picturematch.currentPicture].currentGuess != picturematch.guesses[picturematch.currentPicture].correctGuess" src="redx.png"/>
+	</div>
+</div>
+<div class="pictureright">
+	<div class="score">
+		Score: {{picturematch.score}}/5
+	</div>
+	<div class="scoredots">
+		<div class="dot" ng-repeat="guess in picturematch.guesses" ng-class="{green: guess.currentGuess == guess.correctGuess}"></div>
+	</div>
+	<div class="clear"></div>
+	<img ng-repeat="picture in picturematch.pictures" src="{{picture.src}}" ng-show="picturematch.currentPicture==$index"/>
+</div>
+<div class="clear"></div>
+<div class="picturecontrols">
+	<div class="prev" ng-show="picturematch.currentPicture!=0" ng-click="picturematch.currentPicture = picturematch.currentPicture - 1">
+		Previous
+	</div>
+	<div class="next" ng-show="picturematch.currentPicture!=4" ng-click="picturematch.currentPicture = picturematch.currentPicture + 1">
+		Next
+	</div>
+	<div class="picturereset" ng-click="pictureReset()">
+		Reset
+	</div>
+	<div class="clear"></div>
+</div>

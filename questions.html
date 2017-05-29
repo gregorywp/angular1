@@ -1,0 +1,17 @@
+<div class = "instructions">
+	Answer the questions correctly!
+</div>
+<div class="questionsscore">
+	Score: {{questions.score}}/3
+</div>
+<div class="questions">
+	<div class="question" ng-repeat="option in questions.options">
+		{{option.question}}
+		<input ng-model="option.guess" ng-change="questionsCheck()"></input>
+		<img ng-show="option.guess.length && option.guess.toUpperCase() === option.answer.toUpperCase()" src="checkmark.png"/>
+		<img ng-show="option.guess.length && option.guess.toUpperCase() !== option.answer.toUpperCase()" src="redx.png"/>
+	</div>
+</div>
+<div class="questionsreset" ng-click="questionsReset()">
+	Reset
+</div>
